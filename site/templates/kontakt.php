@@ -1,11 +1,6 @@
 <?php snippet('header') ?>
 
-<div class="page-header">
-  <h1><?= $page->headline() ?></h1>
-  <?php if ($page->intro()->isNotEmpty()): ?>
-    <p class="page-intro"><?= $page->intro() ?></p>
-  <?php endif ?>
-</div>
+<?php snippet('hero', ['page' => $page]) ?>
 
 <div class="contact-content">
   <div class="contact-sections">

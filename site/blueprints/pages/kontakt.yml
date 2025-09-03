@@ -8,6 +8,12 @@ columns:
       content:
         type: fields
         fields:
+          hero_image:
+            type: files
+            label: Hero-Bild
+            max: 1
+            layout: cards
+            size: large
           headline:
             type: text
             label: Überschrift

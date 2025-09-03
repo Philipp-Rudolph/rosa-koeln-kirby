@@ -59,6 +59,10 @@
     }
   }
 
+  &__intro {
+    color: $white;
+  }
+
   &__buttons {
     display: flex;
     gap: $space-md;
