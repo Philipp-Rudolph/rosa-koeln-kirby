@@ -49,6 +49,15 @@ Icon
 
 /site/config/.license
 
+# Content Folder / Repo 
+# ---------------
 /content
 
+# Node modules
+# ---------------
 /node_modules
+
+# compiled styles 
+# ---------------
+/assets/css/style.css
+/assets/css/style.css.map
