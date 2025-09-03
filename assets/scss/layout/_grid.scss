@@ -1,0 +1,54 @@
+// ===== LAYOUT =====
+.container {
+  @include container;
+}
+
+.section {
+  padding: $space-3xl 0;
+}
+
+.section__title {
+  text-align: center;
+  margin-bottom: $space-2xl;
+  font-size: $font-3xl;
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: $primary-color;
+    margin: $space-md auto 0;
+  }
+}
+
+// Grid System
+.grid {
+  display: grid;
+  gap: $space-lg;
+
+  &--auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  &--2-cols {
+    grid-template-columns: repeat(2, 1fr);
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &--3-cols {
+    grid-template-columns: repeat(3, 1fr);
+
+    @include desktop {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}

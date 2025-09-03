@@ -1,0 +1,65 @@
+// ===== TYPOGRAPHY =====
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-primary;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: $space-md;
+}
+
+h1 {
+  font-size: $font-4xl;
+}
+h2 {
+  font-size: $font-3xl;
+}
+h3 {
+  font-size: $font-2xl;
+}
+h4 {
+  font-size: $font-xl;
+}
+h5 {
+  font-size: $font-lg;
+}
+h6 {
+  font-size: $font-base;
+}
+
+// Responsive Typography
+@include mobile {
+  h1 {
+    font-size: $font-3xl;
+  }
+  h2 {
+    font-size: $font-2xl;
+  }
+  h3 {
+    font-size: $font-xl;
+  }
+}
+
+p {
+  margin-bottom: $space-md;
+  color: $text-light;
+}
+
+.lead {
+  font-size: $font-lg;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}

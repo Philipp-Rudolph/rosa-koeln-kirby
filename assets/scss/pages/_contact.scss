@@ -1,0 +1,114 @@
+// ===== CONTACT PAGE STYLES =====
+.contact-content {
+  @include container;
+}
+
+.contact-sections {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: $space-2xl;
+}
+
+.contact-section {
+  opacity: 1;
+
+  h2 {
+    margin-bottom: $space-lg;
+  }
+}
+
+.contact-info {
+  .contact-item {
+    margin-bottom: $space-lg;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    h3 {
+      font-size: $font-lg;
+      margin-bottom: $space-sm;
+    }
+
+    p {
+      margin-bottom: $space-xs;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    address {
+      font-style: normal;
+      line-height: 1.6;
+    }
+
+    a {
+      color: $primary-color;
+
+      &:hover {
+        color: $primary-dark;
+      }
+    }
+  }
+}
+
+.opening-hours-table {
+  .opening-hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $space-sm 0;
+    border-bottom: 1px solid $border-color;
+
+    &:last-child {
+      border-bottom: none;
+    }
+
+    .day {
+      font-weight: 500;
+      color: $text-dark;
+    }
+
+    .hours {
+      color: $text-light;
+    }
+
+    .closed {
+      color: $text-muted;
+      font-style: italic;
+    }
+  }
+}
+
+// ===== MAP SECTION =====
+.map-section {
+  @include container;
+  margin-bottom: $space-3xl;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $space-lg;
+  }
+
+  .map-container {
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    box-shadow: $shadow-md;
+    height: 400px;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  }
+}
+
+// Responsive improvements for contact page
+@include mobile {
+  .contact-sections {
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+  }
+}

@@ -1,0 +1,79 @@
+# site/blueprints/pages/kategorie.yml
+
+title: Kategorie
+icon: tag
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      content:
+        type: fields
+        fields:
+          headline:
+            type: text
+            label: Kategorie-Name
+            required: true
+          description:
+            type: textarea
+            label: Beschreibung
+            size: small
+
+      hero_image:
+        type: files
+        label: Hero-Bild
+        max: 1
+
+      dishes:
+        headline: Gerichte
+        type: fields
+        fields:
+          dishes:
+            type: structure
+            label: Gerichte/Getränke
+            fields:
+              name:
+                type: text
+                label: Name des Gerichts
+                width: 1/2
+              size:
+                type: text
+                label: Größe (optional)
+                width: 1/4
+                placeholder: "0,75l"
+              price:
+                type: text
+                label: Preis
+                width: 1/4
+                placeholder: "12,50 €"
+              vegetarian:
+                type: toggle
+                label: Vegetarisch
+                width: 1/4
+              description:
+                type: textarea
+                label: Beschreibung
+                size: medium
+              allergens:
+                type: text
+                label: Allergene
+                help: z.B. "1,2,3" oder "Gluten, Nüsse"
+              image:
+                type: files
+                label: Bild
+                max: 1
+
+  sidebar:
+    width: 1/3
+    sections:
+      settings:
+        type: fields
+        fields:
+          sort_order:
+            type: number
+            label: Sortierung
+            default: 1
+          category_image:
+            type: files
+            label: Kategorie-Bild
+            max: 1

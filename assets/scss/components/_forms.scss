@@ -1,0 +1,41 @@
+// ===== FORM STYLES =====
+.form-group {
+  margin-bottom: $space-lg;
+
+  label {
+    display: block;
+    margin-bottom: $space-sm;
+    font-weight: 600;
+    color: $secondary-color;
+  }
+
+  input,
+  textarea,
+  select {
+    width: 100%;
+    padding: $space-md;
+    border: 1px solid $border-color;
+    border-radius: $border-radius;
+    font-size: $font-base;
+    transition: $transition;
+    margin-bottom: $space-sm;
+    background-color: $bg-warm;
+
+    &:focus {
+      border-color: $primary-color;
+      box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+      outline: none;
+    }
+  }
+
+  textarea {
+    min-height: 120px;
+    resize: vertical;
+  }
+
+  .error-message {
+    color: $accent-color;
+    font-size: $font-sm;
+    margin-top: $space-xs;
+  }
+}

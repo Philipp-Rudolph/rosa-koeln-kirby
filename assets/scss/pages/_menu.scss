@@ -1,0 +1,184 @@
+// ===== MENU PAGE STYLES =====
+
+// ===== PAGE HEADER =====
+.page-header {
+  background-color: $bg-warm;
+  padding: $space-2xl 0;
+  text-align: center;
+
+  .container {
+    @include container;
+  }
+
+  h1 {
+    margin-bottom: $space-md;
+  }
+
+  .page-intro {
+    font-size: $font-lg;
+    color: $text-light;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+// ===== MENU CONTENT =====
+.menu-content {
+  @include container;
+  padding: $space-2xl 0;
+}
+
+.menu-category {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .category-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-bottom: $space-xl;
+    min-height: 400px;
+
+    h2 {
+      margin-bottom: $space-sm;
+      color: $white;
+    }
+
+    .category-description {
+      color: $white;
+      font-size: $font-lg;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+  }
+
+  // Alternative category header style
+  &.simple .category-header {
+    text-align: center;
+    margin-bottom: $space-xl;
+    min-height: auto;
+
+    h2 {
+      margin-bottom: $space-sm;
+      position: relative;
+      display: inline-block;
+      color: $secondary-color;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50px;
+        height: 2px;
+        background-color: $primary-color;
+      }
+    }
+
+    .category-description {
+      font-size: $font-lg;
+      max-width: 600px;
+      margin: $space-md auto 0;
+      color: $text-light;
+    }
+  }
+}
+
+// ===== DISHES GRID =====
+.dishes-grid {
+  display: grid;
+  gap: $space-lg;
+
+  // Responsive Grid
+  @include wide {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// ===== CATEGORY CONTENT =====
+.category-content {
+  @include container;
+  padding: $space-2xl 0;
+}
+
+// ===== EMPTY MESSAGE =====
+.empty-message {
+  text-align: center;
+  color: $text-light;
+  font-style: italic;
+  font-size: $font-lg;
+  padding: $space-3xl $space-md;
+  background-color: $bg-warm;
+  border-radius: $border-radius-lg;
+}
+
+// ===== ALLERGEN INFO =====
+.allergen-info {
+  padding: $space-xl 0;
+  background-color: $bg-warm;
+  border-top: 1px solid $border-color;
+
+  details {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 $space-md;
+
+    summary {
+      font-weight: 600;
+      cursor: pointer;
+      padding: $space-md;
+      background-color: $bg-light;
+      border-radius: $border-radius;
+      transition: $transition;
+
+      &:hover {
+        background-color: $bg-dark;
+        color: $white;
+      }
+    }
+  }
+
+  .allergen-content {
+    padding: $space-lg;
+    border-radius: 0 0 $border-radius $border-radius;
+    margin-top: 1px;
+    background-color: $bg-light;
+
+    p {
+      margin-bottom: $space-md;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Responsive improvements for menu page
+@include mobile {
+  .dishes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dish-item {
+    padding: $space-md;
+  }
+
+  .menu-navigation {
+    position: static; // Remove sticky on mobile
+  }
+}

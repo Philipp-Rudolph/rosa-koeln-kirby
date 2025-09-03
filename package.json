@@ -1,0 +1,18 @@
+{
+  "name": "gastro-template",
+  "version": "1.0.0",
+  "description": "<img src=\"http://getkirby.com/assets/images/github/plainkit.jpg\" width=\"300\">",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass assets/scss/style.scss assets/css/style.css --watch",
+    "build": "sass assets/scss/style.scss assets/css/style.css --style=compressed"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "sass": "^1.91.0",
+    "scss": "^0.2.4"
+  }
+}

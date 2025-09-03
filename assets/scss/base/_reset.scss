@@ -1,0 +1,57 @@
+// ===== BASE STYLES =====
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 100%;
+}
+
+body {
+  font-family: $font-secondary;
+  font-size: $font-base;
+  line-height: 1.6;
+  color: $text-dark;
+  background-color: $bg-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: $primary-color;
+  text-decoration: none;
+  color: $text-muted;
+  transition: $transition;
+
+  &:hover,
+  &:focus {
+    color: $primary-light;
+  }
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:focus-visible {
+  outline: 2px solid $primary-color;
+  outline-offset: 2px;
+}

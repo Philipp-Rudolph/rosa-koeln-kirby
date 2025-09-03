@@ -1,0 +1,86 @@
+// ===== BUTTONS =====
+.btn {
+  @include button-base;
+
+  &--primary {
+    background-color: $primary-color;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-dark;
+      color: $white;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: $shadow-md;
+    }
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $white;
+    border: 2px solid $primary-color;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &--outline {
+    background-color: transparent;
+    color: $secondary-color;
+    border: 2px solid $secondary-color;
+
+    &:hover,
+    &:focus {
+      background-color: $bg-dark;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &--large {
+    padding: $space-lg $space-2xl;
+    font-size: $font-lg;
+    min-height: 56px;
+  }
+
+  &--small {
+    padding: $space-sm $space-md;
+    font-size: $font-sm;
+    min-height: 36px;
+  }
+}
+
+// ===== FORM BUTTON =====
+.form-button {
+  @include button-base;
+  background-color: $primary-color;
+  color: $white;
+  border: none;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-dark;
+    color: $white;
+    text-decoration: none;
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+  }
+
+  &--secondary {
+    background-color: transparent;
+    color: $primary-color;
+    border: 2px solid $primary-color;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+}

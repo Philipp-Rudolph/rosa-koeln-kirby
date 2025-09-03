@@ -1,0 +1,53 @@
+// ===== RESTAURANT WEBSITE - MODULAR SCSS =====
+// Main style file that imports all modular components
+// No more styles in one big file - everything is organized!
+
+// ===== ABSTRACTS =====
+// Variables and mixins must come first - using @import for global access
+@import "abstracts/variables";
+@import "abstracts/mixins";
+
+// ===== BASE =====
+// Basic styles and resets
+@import "base/reset";
+@import "base/typography";
+@import "base/utilities";
+@import "base/animations";
+
+// ===== LAYOUT =====
+// Layout components like grid, header, footer
+@import "layout/grid";
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/footer";
+
+// ===== COMPONENTS =====
+// Reusable UI components
+@import "components/buttons";
+@import "components/cards";
+@import "components/forms";
+@import "components/gallery";
+
+// ===== PAGES =====
+// Page-specific styles
+@import "pages/home";
+@import "pages/menu";
+@import "pages/contact";
+@import "pages/highlights";
+
+// ===== PRINT STYLES =====
+@media print {
+  .header,
+  .footer,
+  .nav,
+  .btn,
+  .social-links {
+    display: none !important;
+  }
+
+  .hero {
+    min-height: auto !important;
+    padding: $space-md 0 !important;
+  }
+
+}

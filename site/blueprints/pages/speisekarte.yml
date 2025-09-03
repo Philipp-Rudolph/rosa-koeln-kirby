@@ -1,0 +1,25 @@
+title: Speisekarte
+icon: list
+
+sections:
+  content:
+    type: fields
+    fields:
+      headline:
+        type: text
+        label: Überschrift
+        required: true
+      intro:
+        type: textarea
+        label: Einleitungstext
+        size: medium
+
+  categories:
+    headline: Kategorien verwalten
+    type: pages
+    status: listed
+    templates:
+      - kategorie
+    create:
+      kategorie:
+        title: Neue Kategorie

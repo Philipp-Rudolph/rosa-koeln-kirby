@@ -1,0 +1,113 @@
+// ===== FOOTER =====
+.footer {
+  background-color: $bg-dark;
+  color: $white;
+  padding: $space-2xl 0 $space-md;
+
+  &__content {
+    @include container;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: $space-xl;
+    margin-bottom: $space-xl;
+  }
+
+  &__section {
+    h3,
+    h4 {
+      color: $white;
+      margin-bottom: $space-md;
+      font-size: $font-lg;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: $space-sm;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: $primary-light;
+
+      &:hover {
+        color: $white;
+      }
+    }
+
+    > .opening-hours-table {
+      .opening-hours-row {
+        .day {
+          color: $white;
+        }
+
+        .hours {
+          color: $white;
+        }
+
+        .closed {
+          color: $white;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    @include container;
+    padding-top: $space-lg;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $space-sm;
+
+    p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: $font-sm;
+      margin-bottom: 0;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+
+      &:hover {
+        color: $white;
+      }
+    }
+  }
+}
+
+.social-links {
+  display: flex;
+  gap: $space-md;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transition: $transition;
+    color: $white;
+
+    &:hover {
+      background-color: $primary-color;
+      transform: translateY(-2px);
+      text-decoration: none;
+    }
+
+    svg {
+      width: 20px;
+      height: 20px;
+      fill: currentColor;
+    }
+  }
+}
