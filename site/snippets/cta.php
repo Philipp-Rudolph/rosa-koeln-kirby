@@ -4,8 +4,8 @@
     <p>Möchten Sie einen Tisch reservieren? Rufen Sie uns an oder schreiben Sie uns eine E-Mail.</p>
     <div class="cta-buttons">
       <?php if ($site->phone()->isNotEmpty()): ?>
-        <a href="tel:<?= str_replace([' ', '(', ')', '-'], '', $site->phone()) ?>" class="btn btn--primary">
-          Anrufen: <?= $site->phone() ?>
+        <a href="/kontakt" class="btn btn--primary">
+          Zur Kontaktseite
         </a>
       <?php endif ?>
 

@@ -9,7 +9,7 @@
         <h2 class="hero__subheadline"><?= $page->subheadline() ?></h2>
       <?php endif ?>
       <div class="hero__buttons">
-        <a href="<?= url('menu') ?>" class="btn btn--primary">Speisekarte ansehen</a>
+        <a href="<?= url('menu') ?>" class="btn btn--primary">Getränkekarte ansehen</a>
         <a href="<?= url('kontakt') ?>" class="btn btn--secondary">Reservierung</a>
       </div>
     </div>
