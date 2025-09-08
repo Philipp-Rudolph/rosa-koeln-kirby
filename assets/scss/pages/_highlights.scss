@@ -48,7 +48,9 @@
       cursor: pointer;
       transition: $transition;
 
-      &:hover {
+      &:hover,
+      &:active,
+      &.is-active {
         transform: translateY(-5px);
         box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 
