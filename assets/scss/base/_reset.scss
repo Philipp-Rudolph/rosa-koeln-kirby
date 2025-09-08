@@ -24,7 +24,6 @@ body {
 
   // fix scroll bar jump when toggling body overflow
   -ms-overflow-style: none;
-  scrollbar-width: none;
 
   &::-webkit-scrollbar {
     display: none;
