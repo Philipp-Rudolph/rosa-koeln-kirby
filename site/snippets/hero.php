@@ -1,4 +1,4 @@
-<section class="hero" style="background-image: url('<?= $page->hero_image()->isNotEmpty() ? $page->hero_image()->toFile()->url() : '' ?>')">
+<section class="hero" style="background-image: url('<?= $page->hero_image()->isNotEmpty() ? $page->hero_image()->toFile()->thumb()->url() : '' ?>')">
   <div class="hero__overlay">
     <div class="hero__content">
       <h1 class="hero__headline"><?= $page->headline() ?></h1>

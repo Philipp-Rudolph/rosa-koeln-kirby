@@ -14,12 +14,21 @@ return [
         ]
     ],
     'thumbs' => [
-        'quality' => 80,
+        'format' => 'webp', // Standard-Format für alle Thumbnails
+        'quality' => 85,
         'presets' => [
-            'gallery' => ['width' => 800, 'height' => 600, 'crop' => true],
-            'card' => ['width' => 400, 'height' => 300, 'crop' => true],
-            'hero' => ['width' => 1200, 'height' => 600, 'crop' => true]
+            'default' => ['width' => 1024, 'quality' => 80],
+            'blurred' => ['blur' => true],
+            'hero' => ['width' => 1600, 'height' => 900, 'crop' => true], // Preset für Hero-Images
         ]
+    ],
+    'hooks' => [
+        'file.create:after' => function ($file) {
+            // Automatische WebP-Generierung bei Upload
+            if ($file->type() === 'image') {
+                $file->thumb(['format' => 'webp']);
+            }
+        }
     ],
     'kirby3-webp' => true,
     'email' => [
