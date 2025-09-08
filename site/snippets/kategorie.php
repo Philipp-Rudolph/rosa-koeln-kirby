@@ -11,7 +11,7 @@
       <?php if ($category->dishes()->isNotEmpty()): ?>
         <div class="dishes-grid container">
           <?php foreach ($category->dishes()->toStructure() as $dish): ?>
-            <div class="dish-item">
+            <div class="dish-item<?php if ($image = $dish->image()->toFile()): ?> has-background-image<?php endif ?>" id="dish-<?= $dish->name()->slug() ?>" <?php if ($image = $dish->image()->toFile()): ?> style="background-image: url('<?= $image->url() ?>')" <?php endif ?>>
               <div class="dish-content">
                 <div class="dish-header">
                   <h3 class="dish-name">
@@ -32,12 +32,6 @@
                   </p>
                 <?php endif ?>
               </div>
-
-              <?php if ($image = $dish->image()->toFile()): ?>
-                <div class="dish-image">
-                  <img src="<?= $image->crop(500, 500)->url() ?>" alt="<?= $dish->name() ?>" loading="lazy">
-                </div>
-              <?php endif ?>
             </div>
           <?php endforeach ?>
         </div>

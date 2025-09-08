@@ -1,5 +1,4 @@
 title: Restaurant Website
-
 buttons:
   - open
   - preview
@@ -28,7 +27,7 @@ tabs:
               title:
                 type: text
                 label: Website-Titel
-              tagline:
+              Subheadline:
                 type: text
                 label: Untertitel
               description:
@@ -39,6 +38,35 @@ tabs:
       sidebar:
         width: 1/3
         sections:
+          social:
+            type: fields
+            headline: Social Media
+            fields:
+              facebook:
+                type: url
+                label: Facebook
+              instagram:
+                type: url
+                label: Instagram
+              twitter:
+                type: url
+                label: Twitter
+
+          contact:
+            type: fields
+            headline: Kontaktinformationen
+            fields:
+              phone:
+                type: tel
+                label: Telefonnummer
+              email:
+                type: email
+                label: E-Mail-Adresse
+              address:
+                type: textarea
+                label: Adresse
+                size: small
+
           colors:
             type: fields
             headline: Design-Farben
@@ -67,16 +95,3 @@ tabs:
                 placeholder: "#f7f3f0"
                 help: Warme Hintergrundfarbe für Sektionen
                 width: 1/2
-          social:
-            type: fields
-            headline: Social Media
-            fields:
-              facebook:
-                type: url
-                label: Facebook
-              instagram:
-                type: url
-                label: Instagram
-              twitter:
-                type: url
-                label: Twitter

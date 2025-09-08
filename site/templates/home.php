@@ -46,7 +46,7 @@
 <?php snippet('highlights') ?>
 
 <!-- Contact Info Section -->
-<section class="contact-info">
+<!-- <section class="contact-info">
   <div class="contact-info__grid">
     <div class="contact-info__item">
       <h3>Reservierung</h3>
@@ -59,7 +59,9 @@
       <?php snippet('openingHours'); ?>
     </div>
   </div>
-</section>
+</section> -->
+
+<?php snippet('cta') ?>
 
 <!-- Gallery Section -->
 <?php if ($page->gallery_images()->isNotEmpty()): ?>

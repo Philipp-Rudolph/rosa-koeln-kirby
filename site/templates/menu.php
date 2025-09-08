@@ -14,10 +14,14 @@
   </nav>
 </div>
 
+<!-- Kategorien -->
 <?php snippet('kategorie') ?>
 
+<!-- Call to Action -->
+<?php snippet('cta') ?>
+
 <!-- Allergen Information -->
-<section class="allergen-info">
+<!-- <section class="allergen-info">
   <details>
     <summary>Allergen-Informationen</summary>
     <div class="allergen-content">
@@ -33,6 +37,6 @@
       </p>
     </div>
   </details>
-</section>
+</section> -->
 
 <?php snippet('footer') ?>

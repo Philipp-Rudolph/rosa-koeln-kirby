@@ -18,7 +18,7 @@
         $highlights = $page->highlights()->toStructure()->limit(4);
         foreach ($highlights as $index => $highlight):
         ?>
-          <article class="gallery-item" data-reveal="<?= $index ?>">
+          <a href="/menu?category=drinks" class="gallery-item" data-reveal="<?= $index ?>">
             <?php if ($image = $highlight->image()->toFile()): ?>
               <img src="<?= $image->crop(1200, 900)->url() ?>" alt="<?= $highlight->title() ?>" loading="lazy">
               <div class="overlay">
@@ -26,7 +26,7 @@
                 <p><?= $highlight->description() ?></p>
               </div>
             <?php endif ?>
-          </article>
+          </a>
         <?php endforeach ?>
       </div>
     </div>

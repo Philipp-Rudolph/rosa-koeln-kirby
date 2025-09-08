@@ -10,13 +10,11 @@
 
     <div class="footer__section">
       <h4>Kontakt</h4>
-      <?php if ($contacts = $site->find('kontakt')): ?>
-        <p>
-          <?= $contacts->address()->kt() ?><br>
-          Tel: <?= $contacts->phone() ?><br>
-          E-Mail: <a href="mailto:<?= $contacts->email() ?>"><?= $contacts->email() ?></a>
-        </p>
-      <?php endif ?>
+      <p>
+        <?= $site->address()->kt() ?><br>
+        Tel: <?= $site->phone() ?><br>
+        E-Mail: <a href="mailto:<?= $site->email() ?>"><?= $site->email() ?></a>
+      </p>
     </div>
 
     <div class="footer__section">
@@ -25,7 +23,7 @@
     </div>
 
   </div>
-  
+
   <div class="footer__bottom">
     <?php if ($site->facebook()->isNotEmpty() || $site->instagram()->isNotEmpty()): ?>
       <div class="footer__section">
@@ -37,7 +35,7 @@
               </svg>
             </a>
           <?php endif ?>
-  
+
           <?php if ($site->instagram()->isNotEmpty()): ?>
             <a href="<?= $site->instagram() ?>" target="_blank" aria-label="Instagram">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

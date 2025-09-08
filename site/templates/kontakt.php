@@ -9,33 +9,33 @@
     <section class="contact-section">
       <div class="contact-info">
         <h2>Kontaktinformationen</h2>
-        <?php if ($page->address()->isNotEmpty()): ?>
+        <?php if ($site->address()->isNotEmpty()): ?>
           <div class="contact-item">
             <h3>Adresse</h3>
             <address>
-              <?= $page->address()->kt() ?>
+              <?= $site->address()->kt() ?>
             </address>
           </div>
         <?php endif ?>
 
-        <?php if ($page->phone()->isNotEmpty()): ?>
+        <?php if ($site->phone()->isNotEmpty()): ?>
           <div class="contact-item">
             <h3>Telefon</h3>
-            <p><a href="tel:<?= str_replace([' ', '(', ')', '-'], '', $page->phone()) ?>"><?= $page->phone() ?></a></p>
+            <p><a href="tel:<?= str_replace([' ', '(', ')', '-'], '', $site->phone()) ?>"><?= $site->phone() ?></a></p>
           </div>
         <?php endif ?>
 
-        <?php if ($page->email()->isNotEmpty()): ?>
+        <?php if ($site->email()->isNotEmpty()): ?>
           <div class="contact-item">
             <h3>E-Mail</h3>
-            <p><a href="mailto:<?= $page->email() ?>"><?= $page->email() ?></a></p>
+            <p><a href="mailto:<?= $site->email() ?>"><?= $site->email() ?></a></p>
           </div>
         <?php endif ?>
 
-        <?php if ($page->website()->isNotEmpty()): ?>
+        <?php if ($site->website()->isNotEmpty()): ?>
           <div class="contact-item">
             <h3>Website</h3>
-            <p><a href="<?= $page->website() ?>" target="_blank"><?= $page->website() ?></a></p>
+            <p><a href="<?= $site->website() ?>" target="_blank"><?= $site->website() ?></a></p>
           </div>
         <?php endif ?>
       </div>
@@ -65,25 +65,7 @@
 </div>
 
 <!-- Reservation CTA -->
-<section class="reservation-cta">
-  <div class="cta-content container">
-    <h2>Tisch reservieren</h2>
-    <p>Möchten Sie einen Tisch reservieren? Rufen Sie uns an oder schreiben Sie uns eine E-Mail.</p>
-    <div class="cta-buttons">
-      <?php if ($page->phone()->isNotEmpty()): ?>
-        <a href="tel:<?= str_replace([' ', '(', ')', '-'], '', $page->phone()) ?>" class="btn btn--primary">
-          Anrufen: <?= $page->phone() ?>
-        </a>
-      <?php endif ?>
-
-      <?php if ($page->email()->isNotEmpty()): ?>
-        <a href="mailto:<?= $page->email() ?>?subject=Tischreservierung" class="btn btn--secondary">
-          E-Mail senden
-        </a>
-      <?php endif ?>
-    </div>
-  </div>
-</section>
+<?php snippet('cta') ?>
 
 <?php snippet('form') ?>
 

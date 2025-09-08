@@ -8,7 +8,7 @@ return [
     'routes' => [
         [
             'pattern' => '/',
-            'action' => function() {
+            'action' => function () {
                 return site()->visit('home');
             }
         ]
@@ -21,5 +21,16 @@ return [
             'hero' => ['width' => 1200, 'height' => 600, 'crop' => true]
         ]
     ],
-    'kirby3-webp' => true
+    'kirby3-webp' => true,
+    'email' => [
+        'transport' => [
+            'type' => 'smtp',
+            'host' => 'smtp.ihreranbieter.com',
+            'port' => 465,
+            'security' => true,
+            'auth' => true,
+            'username' => 'ihr-smtp-username',
+            'password' => 'ihr-smtp-passwort'
+        ]
+    ]
 ];
