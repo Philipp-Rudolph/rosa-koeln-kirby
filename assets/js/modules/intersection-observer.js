@@ -58,6 +58,15 @@ export function initIntersectionObserver() {
         // Add slight delay for staggered effect
         child.style.transitionDelay = `${index * 0.05}s`;
         child.classList.add("fade-in-child");
+
+        // Remove transitionDelay after fade-in completes
+        child.addEventListener("transitionend", function handler(e) {
+          if (e.propertyName === "opacity") {
+            child.style.transitionDelay = "";
+            child.removeEventListener("transitionend", handler);
+          }
+        });
+        child.classList.add("fade-in-child");
       });
     });
   });
