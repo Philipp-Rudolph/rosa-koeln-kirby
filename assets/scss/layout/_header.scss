@@ -22,10 +22,12 @@
 .logo {
   a {
     text-decoration: none;
+    color: $white;
 
     &:hover,
     &:focus {
       text-decoration: none;
+      color: $accent-color;
     }
   }
 
