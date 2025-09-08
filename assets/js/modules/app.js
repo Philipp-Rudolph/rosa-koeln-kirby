@@ -5,6 +5,7 @@ import { initLightbox } from './lightbox.js';
 import { toggleMenuCategories } from './menu-navigation.js';
 import { initLoadingStates } from './loading-states.js';
 import { initScrollToTop } from './scroll-to-top.js';
+import { initMobileInteractions } from './mobile-interactions.js';
 
 export function initializeApp() {
   try {
@@ -15,7 +16,8 @@ export function initializeApp() {
     initScrollToTop();
     initLightbox();
     toggleMenuCategories();
-    
+    initMobileInteractions();
+
     window.restaurantApp = {
       menu: { toggleMenuCategories }
     };
