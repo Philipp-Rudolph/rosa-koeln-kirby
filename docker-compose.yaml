@@ -1,12 +1,11 @@
 services:
   my_rosa_koeln_kirby_docker:
-    image: areyouhigh/rosa-koeln-kirby:latest
+    build: .
     container_name: my_rosa_koeln_kirby_docker
     restart: always
-    platform: linux/amd64
     ports:
-      - "6060:80"    # Freier Port für HTTP
-      - "6443:443"   # Freier Port für HTTPS
+      - "6060:80"
+      - "6443:443"
     volumes:
       - ./content:/app/content
       - ./assets:/app/assets
