@@ -1,21 +1,24 @@
-FROM webdevops/php-apache-dev:8.1
+FROM webdevops/php-apache-dev:8.2
 
 # Update and install necessary packages
 RUN apt-get update && apt-get install -y git
 
-# Copy the existing application code into the Docker container
-COPY . /app
+# Set the working directory first
+WORKDIR /app
+
+# Copy the entire project
+COPY . /app/
+
+# Ensure content and assets are properly placed
 COPY ./assets /app/assets
 COPY ./content /app/content
 
 # Set correct permissions for the application
-RUN chown -R application:application /app/
+RUN chown -R application:application /app/ && \
+    chmod -R 755 /app/
 
-# Set the working directory
-WORKDIR /app
-
-# Expose ports (diese werden dann auf 6060:6443 gemappt)
+# Expose ports
 EXPOSE 80 443
 
-# Start the Apache server
+# Start the supervisor
 CMD ["supervisord"]
