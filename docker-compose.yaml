@@ -9,3 +9,4 @@ services:
     volumes:
       - ./content:/app/content
       - ./assets:/app/assets
+      - ./site/accounts:/app/site/accounts
