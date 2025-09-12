@@ -1,0 +1,44 @@
+title: Impressum
+icon: lock
+
+# Standardmäßig Seiten-Blueprint
+options:
+  preview: true
+  status: true
+  delete: false
+
+# Felder definieren
+fields:
+  headline:
+    label: Überschrift
+    type: text
+
+  description:
+    label: Beschreibung
+    type: textarea
+    buttons: false
+
+  intro:
+    label: Intro
+    type: textarea
+    buttons: false
+
+  Impressum_text:
+    label: Impressum
+    type: textarea
+    size: large
+    buttons:
+      - bold
+      - italic
+      - link
+      - h1
+      - h2
+      - h3
+      - ul
+      - ol
+      - code
+
+  uuid:
+    label: UUID
+    type: text
+    readonly: true
