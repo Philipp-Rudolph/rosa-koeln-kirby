@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
 <!-- Hero Section -->
-<section class="hero" style="background-image: url('<?= $page->hero_image()->toFile()->thumb()->url() ?>')">
+<section class="hero" style="background-image: url('<?= $page->hero_image()->toFile()->url() ?>')">
   <div class="hero__overlay">
     <div class="hero__content">
       <h1 class="hero__headline"><?= $page->headline() ?></h1>
