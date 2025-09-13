@@ -12,6 +12,10 @@
   background-attachment: fixed;
   color: $white;
 
+  @include tablet {
+    background-attachment: scroll;
+  }
+
   @include mobile {
     background-attachment: scroll;
   }
