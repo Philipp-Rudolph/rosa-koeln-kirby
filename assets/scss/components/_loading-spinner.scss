@@ -1,0 +1,29 @@
+.loading-spinner {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  background: $bg-dark;
+  z-index: 9999;
+  transition: opacity 0.3s ease-in-out, transform 0.5s cubic-bezier(0.77, 0, 0.18, 1);
+}
+.spinner {
+  border: 6px solid rgba(255, 255, 255, 0.3);
+  border-top: 6px solid #ff6b9d;
+  border-radius: 50%;
+  width: 75px;
+  height: 75px;
+  animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
