@@ -31,7 +31,7 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "Restaurant",
+        "@type": "Cocktailbar",
         "name": "<?= $site->title() ?>",
         "description": "<?= $site->description() ?>",
         "telephone": "<?= $page->phone() ?>",

@@ -61,7 +61,7 @@ columns:
           gallery_title:
             type: text
             label: Galerie-Titel
-            default: "Impressionen aus unserem Restaurant"
+            default: "Impressionen aus unserer Cocktailbar"
           gallery_images:
             type: files
             label: Galerie-Bilder

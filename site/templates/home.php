@@ -1,20 +1,7 @@
 <?php snippet('header') ?>
 
 <!-- Hero Section -->
-<section class="hero" style="background-image: url('<?= $page->hero_image()->toFile()->url() ?>')">
-  <div class="hero__overlay">
-    <div class="hero__content">
-      <h1 class="hero__headline"><?= $page->headline() ?></h1>
-      <?php if ($page->subheadline()->isNotEmpty()): ?>
-        <h2 class="hero__subheadline"><?= $page->subheadline() ?></h2>
-      <?php endif ?>
-      <div class="hero__buttons">
-        <a href="<?= url('menu') ?>" class="btn btn--primary">Getränkekarte ansehen</a>
-        <a href="<?= url('kontakt') ?>" class="btn btn--secondary">Reservierung</a>
-      </div>
-    </div>
-  </div>
-</section>
+<?php snippet('hero', ['page' => $page]) ?>
 
 <!-- Intro Section -->
 <?php if ($page->intro()->isNotEmpty()): ?>
@@ -46,21 +33,6 @@
 <?php snippet('highlights') ?>
 
 <!-- Contact Info Section -->
-<!-- <section class="contact-info">
-  <div class="contact-info__grid">
-    <div class="contact-info__item">
-      <h3>Reservierung</h3>
-      <p>Telefon: <?= $page->phone() ?></p>
-      <p>E-Mail: <a href="mailto:<?= $page->email() ?>"><?= $page->email() ?></a></p>
-    </div>
-
-    <div class="contact-info__item">
-      <h3>Öffnungszeiten</h3>
-      <?php snippet('openingHours'); ?>
-    </div>
-  </div>
-</section> -->
-
 <?php snippet('cta') ?>
 
 <!-- Gallery Section -->
