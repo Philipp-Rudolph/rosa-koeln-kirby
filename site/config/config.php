@@ -41,5 +41,6 @@ return [
             'username' => 'ihr-smtp-username',
             'password' => 'ihr-smtp-passwort'
         ]
-    ]
+        ],
+    'thathoff.git-content.commit' => true,
 ];
