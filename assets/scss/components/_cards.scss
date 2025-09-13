@@ -108,6 +108,7 @@
     gap: $space-xs;
 
     @include mobile {
+      flex-direction: column;
       justify-content: center;
     }
   }
@@ -144,6 +145,7 @@
   }
 
   .dish-allergens {
+    display: none;
     font-size: $font-sm;
     color: $text-muted;
     margin-bottom: 0;
