@@ -52,6 +52,7 @@ columns:
                 type: files
                 label: Bild
                 max: 1
+            max: 4
 
       gallery:
         headline: Bildergalerie
