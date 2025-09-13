@@ -88,6 +88,19 @@
                 </a>
               </li>
             <?php endforeach ?>
+
+            <!-- Mobile Language Switcher -->
+            <li class="mobile-nav__item mobile-nav__item--language">
+              <div class="mobile-language-switcher">
+                <?php foreach (kirby()->languages() as $language): ?>
+                  <?php if ($language->code() !== kirby()->language()->code()): ?>
+                    <a href="<?= $page->url($language->code()) ?>" class="mobile-language-switcher__link" hreflang="<?= $language->code() ?>" title="<?= $language->name() ?>">
+                      <?= strtoupper($language->code()) ?>
+                    </a>
+                  <?php endif ?>
+                <?php endforeach ?>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>

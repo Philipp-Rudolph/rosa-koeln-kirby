@@ -1,11 +1,10 @@
 <?php
 return [
-    'debug' => true,
+    'languages' => true,
     'panel' => [
         'install' => true
     ],
     'url' => $_SERVER['SERVER_NAME'] === 'localhost' ? 'http://localhost:8080' : 'https://rosa.shift-wise.de',
-    'languages' => false, // Später auf true für Mehrsprachigkeit
     'routes' => [
         [
             'pattern' => '/',

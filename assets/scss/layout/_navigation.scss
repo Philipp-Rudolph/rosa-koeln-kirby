@@ -27,11 +27,9 @@
       &:nth-child(1) {
         transform: rotate(45deg) translate(6px, 6px);
       }
-
       &:nth-child(2) {
         opacity: 0;
       }
-
       &:nth-child(3) {
         transform: rotate(-45deg) translate(6px, -6px);
       }
@@ -80,9 +78,12 @@
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  display: flex;
+  flex-direction: column; // Enable flexbox for proper spacing
 
   &.is-active {
     transform: translateX(0);
+    width: 280px; // Set a fixed width when active
   }
 }
 
@@ -105,10 +106,20 @@
   list-style: none;
   padding: $space-lg 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1; // Takes available space
 }
 
 .mobile-nav__item {
   margin: 0;
+
+  // Language switcher specific styling
+  &--language {
+    margin-top: auto; // Pushes to bottom
+    padding-top: $space-lg;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 }
 
 .mobile-nav__link {
@@ -130,6 +141,53 @@
   &[aria-current="page"] {
     border-left-color: $primary-color;
     font-weight: 600;
+  }
+}
+
+// ===== MOBILE LANGUAGE SWITCHER =====
+.mobile-language-switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: $space-sm;
+  padding: $space-md $space-lg;
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: $space-sm $space-md;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: $white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: $font-sm;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all $transition;
+    border: 2px solid transparent;
+    min-width: 48px;
+    min-height: 48px;
+
+    &:hover,
+    &:focus {
+      background-color: $primary-color;
+      color: $white;
+      border-color: $primary-color;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba($primary-color, 0.3);
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+
+    // Current language indicator
+    &[aria-current="page"] {
+      background-color: $primary-color;
+      color: $bg-dark;
+      border-color: $primary-color;
+    }
   }
 }
 
@@ -189,7 +247,6 @@
 
     &:hover {
       border-bottom: 2px solid $primary-color;
-      // color: $white;
       text-decoration: none;
     }
 
