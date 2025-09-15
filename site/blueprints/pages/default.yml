@@ -4,7 +4,6 @@ buttons:
   - open
   - preview
   - settings
-  - content-translator # Re-order the button as needed
   - languages
   - status
 

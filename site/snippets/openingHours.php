@@ -1,6 +1,6 @@
-<?php if ($page->opening_hours()->isNotEmpty()): ?>
+<?php if ($site->opening_hours()->isNotEmpty()): ?>
   <div class="opening-hours-table">
-    <?php foreach ($page->opening_hours()->toStructure() as $hours): ?>
+    <?php foreach ($site->opening_hours()->toStructure() as $hours): ?>
       <?php
       $dayNames = [
         'monday' => 'Montag',

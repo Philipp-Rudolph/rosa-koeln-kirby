@@ -37,8 +37,3 @@ fields:
       - ul
       - ol
       - code
-
-  uuid:
-    label: UUID
-    type: text
-    readonly: true

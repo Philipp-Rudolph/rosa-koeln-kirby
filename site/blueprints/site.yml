@@ -1,9 +1,4 @@
 title: Rosa Website
-buttons:
-  - open
-  - preview
-  - content-translator # Re-order the button as needed
-  - languages
 
 tabs:
   content:
@@ -15,7 +10,7 @@ tabs:
         status: all
 
   settings:
-    label: Einstellungen
+    label: Globale Informationen
     icon: cog
     columns:
       main:
@@ -48,9 +43,9 @@ tabs:
               instagram:
                 type: url
                 label: Instagram
-              twitter:
+              whatsapp:
                 type: url
-                label: Twitter
+                label: WhatsApp
 
           contact:
             type: fields
@@ -67,31 +62,49 @@ tabs:
                 label: Adresse
                 size: small
 
-          colors:
+          openingHours:
+            label: Öffnungszeiten
             type: fields
-            headline: Design-Farben
             fields:
-              primary_color:
-                type: text
-                label: Primärfarbe (Kupfer)
-                placeholder: "#d4a574"
-                help: Hauptfarbe für Buttons und Akzente
-                width: 1/2
-              secondary_color:
-                type: text
-                label: Sekundärfarbe (Anthrazit)
-                placeholder: "#3d4142"
-                help: Farbe für Texte und Header
-                width: 1/2
-              accent_color:
-                type: text
-                label: Akzentfarbe (Rostrot)
-                placeholder: "#8b4a42"
-                help: Zusätzliche Akzentfarbe
-                width: 1/2
-              bg_warm:
-                type: text
-                label: Warmer Hintergrund
-                placeholder: "#f7f3f0"
-                help: Warme Hintergrundfarbe für Sektionen
-                width: 1/2
+              opening_hours:
+                type: textarea
+                label: Öffnungszeiten
+                size: large
+                placeholder: |
+                  Montag: 11:30 - 14:30 & 17:30 - 23:00
+                  Dienstag: 11:30 - 14:30 & 17:30 - 23:00
+                  Mittwoch: 11:30 - 14:30 & 17:30 - 23:00
+                  Donnerstag: 11:30 - 14:30 & 17:30 - 23:00
+                  Freitag: 11:30 - 14:30 & 17:30 - 24:00
+                  Samstag: 11:30 - 14:30 & 17:30 - 24:00
+                  Sonntag: 12:00 - 22:00
+                help: "Geben Sie die Öffnungszeiten für jeden Wochentag ein. Eine Zeile pro Tag."
+
+          # colors:
+          #   type: fields
+          #   headline: Design-Farben
+          #   fields:
+          #     primary_color:
+          #       type: text
+          #       label: Primärfarbe (Kupfer)
+          #       placeholder: "#d4a574"
+          #       help: Hauptfarbe für Buttons und Akzente
+          #       width: 1/2
+          #     secondary_color:
+          #       type: text
+          #       label: Sekundärfarbe (Anthrazit)
+          #       placeholder: "#3d4142"
+          #       help: Farbe für Texte und Header
+          #       width: 1/2
+          #     accent_color:
+          #       type: text
+          #       label: Akzentfarbe (Rostrot)
+          #       placeholder: "#8b4a42"
+          #       help: Zusätzliche Akzentfarbe
+          #       width: 1/2
+          #     bg_warm:
+          #       type: text
+          #       label: Warmer Hintergrund
+          #       placeholder: "#f7f3f0"
+          #       help: Warme Hintergrundfarbe für Sektionen
+          #       width: 1/2

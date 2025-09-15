@@ -3,7 +3,7 @@ icon: home
 
 columns:
   main:
-    width: 2/3
+    width: 3/3
     sections:
       content:
         type: fields
@@ -73,19 +73,3 @@ columns:
               accept: image/*
               multiple: true
 
-  sidebar:
-    width: 1/3
-    sections:
-      meta:
-        type: fields
-        fields:
-          opening_hours:
-            type: textarea
-            label: Öffnungszeiten
-            help: Eine Zeile pro Tag
-          phone:
-            type: text
-            label: Telefonnummer
-          email:
-            type: email
-            label: E-Mail

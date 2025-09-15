@@ -5,7 +5,7 @@ sections:
   content:
     type: fields
     fields:
-    hero_image:
+      hero_image:
         type: files
         label: Hero-Bild
         max: 1

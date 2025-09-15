@@ -19,7 +19,7 @@
 
     <div class="footer__section">
       <h4>Öffnungszeiten</h4>
-      <?php snippet('openingHours', ['page' => $site->find('kontakt')]); ?>
+      <?php snippet('openingHours') ?>
     </div>
 
   </div>
