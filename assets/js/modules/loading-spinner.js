@@ -1,6 +1,5 @@
 // loading-spinner.js - Verbesserte Version
 export function showLoadingSpinner() {
-    console.log('Showing spinner...');
     const spinner = document.querySelector('.loading-spinner');
 
     if (spinner) {
@@ -13,7 +12,6 @@ export function showLoadingSpinner() {
 }
 
 export function hideLoadingSpinner() {
-    console.log('Hiding spinner...');
     const spinner = document.querySelector('.loading-spinner');
 
     if (spinner) {

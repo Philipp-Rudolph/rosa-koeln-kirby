@@ -37,7 +37,6 @@ export function initializeApp() {
     initErrorHandling();
     initPerformanceMonitoring();
 
-    console.log("✅ App successfully initialized");
   } catch (error) {
     console.error("❌ App initialization failed:", error);
   }
@@ -64,9 +63,6 @@ function initLoadingStates() {
     return;
   }
 
-  console.log("✅ Loading spinner initialized");
-
-  // Optional: Auto-hide Loading Spinner nach Page Load
   window.addEventListener("load", () => {
     // Kleine Verzögerung für bessere UX
     setTimeout(() => {
