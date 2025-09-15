@@ -16,14 +16,16 @@
                 <div class="dish-header">
                   <h3 class="dish-name">
                     <?= $dish->name() ?>
-                    <span class="dish-size"><?= $dish->size() ?></span>
                   </h3>
                   <div class="dish-dots"></div>
                   <span class="dish-price"><?= $dish->price() ?></span>
                 </div>
 
                 <?php if ($dish->description()->isNotEmpty()): ?>
-                  <p class="dish-description"><?= $dish->description() ?></p>
+                  <div class="dish-body">
+                    <p class="dish-description"><?= $dish->description() ?></p>
+                    <span class="dish-size"><?= $dish->size() ?></span>
+                  </div>
                 <?php endif ?>
 
                 <?php if ($dish->allergens()->isNotEmpty()): ?>

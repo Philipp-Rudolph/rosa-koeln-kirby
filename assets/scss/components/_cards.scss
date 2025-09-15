@@ -39,7 +39,7 @@
   display: flex;
   align-items: flex-start;
   gap: $space-md;
-  padding: $space-lg;
+  padding: $space-md $space-lg;
   border-radius: $border-radius-lg;
   overflow: hidden;
   box-shadow: $shadow-md;
@@ -100,6 +100,16 @@
     }
   }
 
+  .dish-body {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      gap: $space-xs;
+    }
+  }
+
   .dish-name {
     font-size: $font-lg;
     margin-bottom: 0;
@@ -126,7 +136,7 @@
   }
 
 
-  .dish-price, .dish-size {
+  .dish-price {
     font-size: $font-lg;
     font-weight: 600;
     color: $primary-color;
@@ -138,10 +148,16 @@
     }
   }
 
+  .dish-size {
+    text-wrap: nowrap;
+    color: $text-muted;
+  }
+
   .dish-description {
-    color: $text-light;
-    margin-bottom: $space-sm;
+    color: $text-muted;
     line-height: 1.5;
+    margin-bottom: 0;
+    font-style: italic;
   }
 
   .dish-allergens {
